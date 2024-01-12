@@ -21,9 +21,9 @@ With this application we will be able to buy projects from developers and sell o
 
 ## Screenshot
 - Login Screen
-
-![login](https://github.com/nandaarya/IdeasConnect/blob/master/screenshot/login.jpg)
+  
+<img src="https://github.com/nandaarya/IdeasConnect/blob/master/screenshot/login.jpg" alt="Login Screen" width="300px" />
 
 - Register Screen
-
-![register](https://github.com/nandaarya/IdeasConnect/blob/master/screenshot/register.jpg)
+  
+<img src="https://github.com/nandaarya/IdeasConnect/blob/master/screenshot/register.jpg" alt="Register Screen" width="300px" />
