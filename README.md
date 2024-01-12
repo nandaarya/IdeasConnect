@@ -11,7 +11,7 @@ With this application we will be able to buy projects from developers and sell o
 | Name                            | Role               | Email                           |
 | ------------------------------- | ------------------ | ------------------------------- |
 | Nanda Arya Putra                | Hacker             | nandaarya404@gmail.com          |
-| Cherillya Rahmita               | Hacker             | cherillya.rahmita@gmail.com2    |
+| Cherillya Rahmita               | Hacker             | cherillya.rahmita@gmail.com     |
 | Muhammad Alfarizi Habibullah    | Hustler            | m.alfarizihabibullah@gmail.com  |
 | Arif Rachman Ramadhon           | Hipster            | arifr0698@gmail.com             |
 
