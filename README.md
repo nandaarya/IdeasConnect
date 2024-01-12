@@ -20,3 +20,10 @@ With this application we will be able to buy projects from developers and sell o
 - [Backend Source Code](https://github.com/rillyaa/backend-IC)
 
 ## Screenshot
+- Login Screen
+
+![login](https://github.com/nandaarya/IdeasConnect/blob/master/screenshot/login.jpg)
+
+- Register Screen
+
+![register](https://github.com/nandaarya/IdeasConnect/blob/master/screenshot/register.jpg)
