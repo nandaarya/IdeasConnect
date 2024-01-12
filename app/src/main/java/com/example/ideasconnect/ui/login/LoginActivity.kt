@@ -27,35 +27,35 @@ class LoginActivity : AppCompatActivity() {
         binding = ActivityLoginBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        val factory: ViewModelFactory = ViewModelFactory.getInstance(this)
-        loginViewModel = ViewModelProvider(this, factory)[LoginViewModel::class.java]
-
-        loginViewModel.getSession().observe(this) { user ->
-            if (user.isLogin) {
-                startActivity(Intent(this, MainActivity::class.java))
-                finish()
-            }
-        }
-
-        loginViewModel.loginResponse.observe(this) {
-            when (it) {
-                is Result.Loading -> {
-                    showLoading(true)
-                }
-                is Result.Success -> {
-                    showLoading(false)
-                }
-                is Result.Error -> {
-                    AlertDialog.Builder(this).apply {
-                        setTitle(getString(R.string.login_failed_dialog_title))
-                        setMessage(getString(R.string.login_failed_dialog))
-                        create()
-                        show()
-                    }
-                    showLoading(false)
-                }
-            }
-        }
+//        val factory: ViewModelFactory = ViewModelFactory.getInstance(this)
+//        loginViewModel = ViewModelProvider(this, factory)[LoginViewModel::class.java]
+//
+//        loginViewModel.getSession().observe(this) { user ->
+//            if (user.isLogin) {
+//                startActivity(Intent(this, MainActivity::class.java))
+//                finish()
+//            }
+//        }
+//
+//        loginViewModel.loginResponse.observe(this) {
+//            when (it) {
+//                is Result.Loading -> {
+//                    showLoading(true)
+//                }
+//                is Result.Success -> {
+//                    showLoading(false)
+//                }
+//                is Result.Error -> {
+//                    AlertDialog.Builder(this).apply {
+//                        setTitle(getString(R.string.login_failed_dialog_title))
+//                        setMessage(getString(R.string.login_failed_dialog))
+//                        create()
+//                        show()
+//                    }
+//                    showLoading(false)
+//                }
+//            }
+//        }
 
         setupView()
         setupAction()

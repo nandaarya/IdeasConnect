@@ -28,35 +28,35 @@ class SignupActivity : AppCompatActivity() {
         binding = ActivitySignupBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        val factory: ViewModelFactory = ViewModelFactory.getInstance(this)
-        signupViewModel = ViewModelProvider(this, factory)[SignupViewModel::class.java]
-
-        signupViewModel.registerResponse.observe(this) {
-            when (it) {
-                is Result.Loading -> {
-                    showLoading(true)
-                }
-                is Result.Success -> {
-                    showLoading(false)
-                    AlertDialog.Builder(this).apply {
-                        setTitle("Yeah!")
-                        setMessage(getString(R.string.register_dialog_message))
-                        setCancelable(false)
-                        setPositiveButton(getString(R.string.dialog_positive_button)) { _, _ ->
-                            val intent = Intent(context, LoginActivity::class.java)
-                            startActivity(intent)
-                            finish()
-                        }
-                        create()
-                        show()
-                    }
-                }
-                is Result.Error -> {
-                    registerFailedToast()
-                    showLoading(false)
-                }
-            }
-        }
+//        val factory: ViewModelFactory = ViewModelFactory.getInstance(this)
+//        signupViewModel = ViewModelProvider(this, factory)[SignupViewModel::class.java]
+//
+//        signupViewModel.registerResponse.observe(this) {
+//            when (it) {
+//                is Result.Loading -> {
+//                    showLoading(true)
+//                }
+//                is Result.Success -> {
+//                    showLoading(false)
+//                    AlertDialog.Builder(this).apply {
+//                        setTitle("Yeah!")
+//                        setMessage(getString(R.string.register_dialog_message))
+//                        setCancelable(false)
+//                        setPositiveButton(getString(R.string.dialog_positive_button)) { _, _ ->
+//                            val intent = Intent(context, LoginActivity::class.java)
+//                            startActivity(intent)
+//                            finish()
+//                        }
+//                        create()
+//                        show()
+//                    }
+//                }
+//                is Result.Error -> {
+//                    registerFailedToast()
+//                    showLoading(false)
+//                }
+//            }
+//        }
 
         setupView()
         setupAction()
