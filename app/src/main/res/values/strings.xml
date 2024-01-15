@@ -30,4 +30,5 @@
     <string name="idea_description">Idea Description (Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse sapien sem, pulvinar bibendum sodales nec, commodo sed orci. Pellentesque ut.)</string>
     <string name="developer_name">Developer Name</string>
     <string name="submit_date">Submit Date</string>
+    <string name="submit_idea">Submit Idea</string>
 </resources>
