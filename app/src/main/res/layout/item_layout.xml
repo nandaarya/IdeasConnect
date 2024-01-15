@@ -18,7 +18,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:padding="8dp"
-            android:text="Idea Title"
+            android:text="@string/idea_title"
             android:textAppearance="@style/TextAppearance.Material3.TitleLarge"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
@@ -29,7 +29,7 @@
             android:layout_height="wrap_content"
             android:maxLines="3"
             android:padding="8dp"
-            android:text="Idea Description (Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse sapien sem, pulvinar bibendum sodales nec, commodo sed orci. Pellentesque ut.)"
+            android:text="@string/idea_description"
             android:textAppearance="@style/TextAppearance.Material3.BodyLarge"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -40,8 +40,9 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:padding="8dp"
-            android:text="Developer Name"
+            android:text="@string/developer_name"
             android:textAppearance="@style/TextAppearance.Material3.TitleSmall"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/tv_idea_description" />
 
@@ -50,8 +51,9 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:padding="8dp"
-            android:text="Submit Date"
+            android:text="@string/submit_date"
             android:textAppearance="@style/TextAppearance.Material3.TitleSmall"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/tv_idea_description" />
 

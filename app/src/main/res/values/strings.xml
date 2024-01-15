@@ -26,4 +26,8 @@
     <string name="dialog_positive_button">Lanjut</string>
     <string name="register_dialog_message">Akunmu sudah jadi nih. Buruan login dan cari tempat wisatamu!</string>
     <string name="label_signup">Belum punya akun?</string>
+    <string name="idea_title">Idea Title</string>
+    <string name="idea_description">Idea Description (Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse sapien sem, pulvinar bibendum sodales nec, commodo sed orci. Pellentesque ut.)</string>
+    <string name="developer_name">Developer Name</string>
+    <string name="submit_date">Submit Date</string>
 </resources>
