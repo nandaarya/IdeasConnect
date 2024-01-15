@@ -8,13 +8,7 @@ import android.os.Bundle
 import android.view.View
 import android.view.WindowInsets
 import android.view.WindowManager
-import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
-import androidx.lifecycle.ViewModelProvider
-import com.example.ideasconnect.MainActivity
-import com.example.ideasconnect.R
-import com.example.ideasconnect.ViewModelFactory
-import com.example.ideasconnect.data.Result
 import com.example.ideasconnect.databinding.ActivityLoginBinding
 import com.example.ideasconnect.ui.signup.SignupActivity
 
