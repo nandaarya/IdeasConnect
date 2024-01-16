@@ -31,4 +31,5 @@
     <string name="developer_name">Developer Name</string>
     <string name="submit_date">Submit Date</string>
     <string name="submit_idea">Submit Idea</string>
+    <string name="profile_title">Profil</string>
 </resources>

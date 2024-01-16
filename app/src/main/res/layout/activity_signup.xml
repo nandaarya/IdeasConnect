@@ -109,6 +109,7 @@
                 android:ems="10"
                 android:hint="@string/edt_email_hint"
                 android:inputType="textEmailAddress"
+                android:minHeight="48dp"
                 tools:ignore="SpeakableTextPresentCheck,VisualLintTextFieldSize" />
         </com.google.android.material.textfield.TextInputLayout>
 
@@ -145,6 +146,7 @@
                 android:layout_height="wrap_content"
                 android:ems="10"
                 android:inputType="textPassword"
+                android:minHeight="48dp"
                 tools:ignore="SpeakableTextPresentCheck,VisualLintTextFieldSize" />
         </com.google.android.material.textfield.TextInputLayout>
 

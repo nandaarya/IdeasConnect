@@ -25,7 +25,7 @@
             android:id="@+id/tv_description_label"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Description"
+            android:text="Deskripsi Ide"
             style="@style/TextAppearance.Material3.LabelLarge"
             android:textSize="16sp"
             android:layout_margin="16dp"
@@ -47,7 +47,7 @@
             android:id="@+id/tv_additional_label"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Additional Details"
+            android:text="Detail Tambahan"
             style="@style/TextAppearance.Material3.LabelLarge"
             android:textSize="16sp"
             android:layout_margin="16dp"
@@ -67,16 +67,40 @@
             app:layout_constraintTop_toBottomOf="@+id/tv_additional_label" />
 
         <TextView
+            android:id="@+id/tv_developer_name_label"
+            style="@style/TextAppearance.Material3.LabelLarge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            android:layout_marginStart="56dp"
+            android:text="Developer"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_additional_detail"/>
+
+        <TextView
+            android:id="@+id/tv_developer_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="16dp"
+            android:layout_marginTop="8dp"
+            android:text="Albert Einstein"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_developer_name_label" />
+
+        <TextView
             android:id="@+id/tv_date_label"
             style="@style/TextAppearance.Material3.LabelLarge"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="16dp"
             android:layout_marginStart="56dp"
-            android:text="Submit Date"
+            android:text="Tanggal Submit"
             android:textSize="16sp"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/tv_additional_detail"/>
+            app:layout_constraintTop_toBottomOf="@id/tv_developer_name"/>
 
         <TextView
             android:id="@+id/tv_submit_date"
@@ -93,9 +117,9 @@
         <Button
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginVertical="16dp"
+            android:layout_marginVertical="24dp"
             android:layout_marginHorizontal="8dp"
-            android:text="Offer Investment"
+            android:text="Tawarkan Investasi"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
