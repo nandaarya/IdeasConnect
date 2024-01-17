@@ -10,6 +10,6 @@
     <ImageView
         android:layout_width="300dp"
         android:layout_height="300dp"
-        android:src="@drawable/IdeasConnect1"
+        android:src="@drawable/ideasconnectlogo1"
         android:contentDescription="@string/image_logo" />
 </LinearLayout>
