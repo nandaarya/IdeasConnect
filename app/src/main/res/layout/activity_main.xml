@@ -32,7 +32,7 @@
         tools:listitem="@layout/item_layout" />
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/fab_add_story"
+        android:id="@+id/fab_submit_idea"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="end|bottom"

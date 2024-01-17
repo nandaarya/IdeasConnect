@@ -12,6 +12,7 @@ import com.example.ideasconnect.ViewModelFactory
 import com.example.ideasconnect.databinding.ActivityMainBinding
 import com.example.ideasconnect.data.Result
 import com.example.ideasconnect.ui.profile.ProfileActivity
+import com.example.ideasconnect.ui.submit.SubmitIdeaActivity
 
 class MainActivity : AppCompatActivity() {
 
@@ -51,6 +52,7 @@ class MainActivity : AppCompatActivity() {
         }
 
         setOptionMenu()
+        setFAB()
     }
 
     private fun setOptionMenu() {
@@ -64,6 +66,13 @@ class MainActivity : AppCompatActivity() {
 
                 else -> false
             }
+        }
+    }
+
+    private fun setFAB() {
+        binding.fabSubmitIdea.setOnClickListener {
+            val intent = Intent(this, SubmitIdeaActivity::class.java)
+            startActivity(intent)
         }
     }
 

@@ -1,10 +1,12 @@
 package com.example.ideasconnect.ui.main
 
+import android.content.Intent
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.example.ideasconnect.data.response.IdeaListItem
 import com.example.ideasconnect.databinding.ItemLayoutBinding
+import com.example.ideasconnect.ui.detail.DetailActivity
 
 class IdeaListAdapter : RecyclerView.Adapter<IdeaListAdapter.IdeaListViewHolder>() {
 
@@ -26,6 +28,12 @@ class IdeaListAdapter : RecyclerView.Adapter<IdeaListAdapter.IdeaListViewHolder>
             binding.tvIdeaDescription.text = itemNow.ideaDescription
             binding.tvDate.text = itemNow.submissionDate
             binding.tvDeveloperName.text = itemNow.developerName
+
+            binding.itemLayout.setOnClickListener {
+                val intent = Intent(itemView.context, DetailActivity::class.java)
+                intent.putExtra(DetailActivity.EXTRA_IDEA_DETAIL, itemNow)
+                itemView.context.startActivity(intent)
+            }
 
         }
     }
