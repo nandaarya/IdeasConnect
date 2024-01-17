@@ -1,14 +1,17 @@
 package com.example.ideasconnect.ui.main
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import android.view.View
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.example.ideasconnect.R
 import com.example.ideasconnect.ViewModelFactory
 import com.example.ideasconnect.databinding.ActivityMainBinding
 import com.example.ideasconnect.data.Result
+import com.example.ideasconnect.ui.profile.ProfileActivity
 
 class MainActivity : AppCompatActivity() {
 
@@ -44,6 +47,22 @@ class MainActivity : AppCompatActivity() {
                         rvIdeaListAdapter.addIdeaList(it.data)
                     }
                 }
+            }
+        }
+
+        setOptionMenu()
+    }
+
+    private fun setOptionMenu() {
+        binding.topAppBar.setOnMenuItemClickListener { menuItem ->
+            when (menuItem.itemId) {
+                R.id.menu_profile -> {
+                    val intent = Intent(this, ProfileActivity::class.java)
+                    startActivity(intent)
+                    true
+                }
+
+                else -> false
             }
         }
     }

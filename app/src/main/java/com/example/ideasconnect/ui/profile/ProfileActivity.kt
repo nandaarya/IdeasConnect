@@ -12,6 +12,7 @@ class ProfileActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityProfileBinding
     private lateinit var profileViewModel: ProfileViewModel
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityProfileBinding.inflate(layoutInflater)
@@ -23,10 +24,10 @@ class ProfileActivity : AppCompatActivity() {
         val factory: ViewModelFactory = ViewModelFactory.getInstance(this)
         profileViewModel = ViewModelProvider(this, factory)[ProfileViewModel::class.java]
 
-        profileViewModel.getSession().observe(this) {
-            binding.tvName.text = it.name
-            binding.tvEmail.text = it.email
-        }
+//        profileViewModel.getSession().observe(this) {
+//            binding.tvName.text = it.name
+//            binding.tvEmail.text = it.email
+//        }
 
         binding.btnLogout.setOnClickListener {
             profileViewModel.logout()
