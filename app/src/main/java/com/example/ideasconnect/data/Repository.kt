@@ -1,8 +1,11 @@
 package com.example.ideasconnect.data
 
+import android.util.Log
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.liveData
 import com.example.ideasconnect.data.datastore.UserPreference
+import com.example.ideasconnect.data.response.DataDummy
+import com.example.ideasconnect.data.response.IdeaListItem
 import com.example.ideasconnect.data.response.LoginResponse
 import com.example.ideasconnect.data.response.RegisterResponse
 import com.example.ideasconnect.data.retrofit.ApiService
@@ -51,6 +54,20 @@ class Repository private constructor(
                 val userId = response.loginResult.userId
                 saveSession(UserModel(userId, name, email, token))
                 emit(Result.Success(response))
+            } catch (e: Exception) {
+                emit(Result.Error(e.message.toString()))
+            }
+        }
+
+    fun getIdeaList(token: String): LiveData<Result<List<IdeaListItem>>> =
+        liveData(Dispatchers.IO) {
+            emit(Result.Loading)
+            try {
+//                Log.d("list repository", "Mulai get data list")
+//                val response = apiService.getIdeaList( "Bearer $token")
+//                Log.d("list repository", response.message)
+                val ideaList = DataDummy.ideaListDummy
+                emit(Result.Success(ideaList))
             } catch (e: Exception) {
                 emit(Result.Error(e.message.toString()))
             }

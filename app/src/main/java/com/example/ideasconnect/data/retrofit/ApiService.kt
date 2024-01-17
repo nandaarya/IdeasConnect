@@ -19,4 +19,9 @@ interface ApiService {
         @Field("email") email: String,
         @Field("password") password: String
     ): LoginResponse
+
+    @GET("idea-list")
+    suspend fun getIdeaList(
+        @Header("Authorization") token: String,
+    ): GetIdeaListResponse
 }

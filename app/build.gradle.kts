@@ -1,6 +1,10 @@
+import java.util.Properties
+import java.io.FileInputStream
+
 plugins {
     id("com.android.application")
     id("org.jetbrains.kotlin.android")
+    id ("kotlin-parcelize")
 }
 
 android {
@@ -15,6 +19,12 @@ android {
         versionName = "1.0"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
+
+        val properties = Properties().apply {
+            load(FileInputStream(project.rootProject.file("local.properties")))
+        }
+
+        buildConfigField("String", "BASE_URL", properties.getProperty("BASE_URL_API"))
     }
 
     buildTypes {
@@ -56,4 +66,7 @@ dependencies {
     implementation("androidx.datastore:datastore-preferences:1.0.0")
     implementation("androidx.lifecycle:lifecycle-viewmodel-ktx:2.7.0")
     implementation("androidx.lifecycle:lifecycle-livedata-ktx:2.7.0")
+
+    implementation ("com.github.bumptech.glide:glide:4.15.1")
+    implementation ("de.hdodenhof:circleimageview:3.1.0")
 }

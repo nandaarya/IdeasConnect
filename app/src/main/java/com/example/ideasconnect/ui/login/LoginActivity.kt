@@ -10,6 +10,7 @@ import android.view.WindowInsets
 import android.view.WindowManager
 import androidx.appcompat.app.AppCompatActivity
 import com.example.ideasconnect.databinding.ActivityLoginBinding
+import com.example.ideasconnect.ui.main.MainActivity
 import com.example.ideasconnect.ui.signup.SignupActivity
 
 class LoginActivity : AppCompatActivity() {
@@ -71,13 +72,15 @@ class LoginActivity : AppCompatActivity() {
 
     private fun setupAction() {
         binding.loginButton.setOnClickListener {
-            binding.apply {
-                if (emailEditText.error.isNullOrEmpty() && edtPasswordLogin.error.isNullOrEmpty()) {
-                    val email = emailEditText.text.toString().trim()
-                    val password = edtPasswordLogin.text.toString().trim()
-                    loginViewModel.login(email, password)
-                }
-            }
+//            binding.apply {
+//                if (emailEditText.error.isNullOrEmpty() && edtPasswordLogin.error.isNullOrEmpty()) {
+//                    val email = emailEditText.text.toString().trim()
+//                    val password = edtPasswordLogin.text.toString().trim()
+//                    loginViewModel.login(email, password)
+//                }
+//            }
+            startActivity(Intent(this, MainActivity::class.java))
+            finish()
         }
 
         binding.btnSignup.setOnClickListener {
@@ -105,8 +108,10 @@ class LoginActivity : AppCompatActivity() {
         val passwordEditTextLayout =
             ObjectAnimator.ofFloat(binding.passwordEditTextLayout, View.ALPHA, 1f).setDuration(100)
         val login = ObjectAnimator.ofFloat(binding.loginButton, View.ALPHA, 1f).setDuration(100)
-        val signupTextView = ObjectAnimator.ofFloat(binding.tvSignup, View.ALPHA, 1f).setDuration(100)
-        val signupButton = ObjectAnimator.ofFloat(binding.btnSignup, View.ALPHA, 1f).setDuration(100)
+        val signupTextView =
+            ObjectAnimator.ofFloat(binding.tvSignup, View.ALPHA, 1f).setDuration(100)
+        val signupButton =
+            ObjectAnimator.ofFloat(binding.btnSignup, View.ALPHA, 1f).setDuration(100)
 
         AnimatorSet().apply {
             playSequentially(
