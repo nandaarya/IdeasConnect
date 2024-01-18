@@ -17,7 +17,7 @@ With this application we will be able to buy projects from developers and sell o
 
 ## Link
 
-- [Backend Source Code](https://github.com/rillyaa/backend-IC)
+- [Backend Source Code (APIs)](https://github.com/rillyaa/backend-IC)
 
 ## Screenshot
 - Splashscreen
